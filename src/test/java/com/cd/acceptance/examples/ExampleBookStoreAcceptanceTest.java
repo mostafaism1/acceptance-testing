@@ -5,8 +5,6 @@ import com.cd.acceptance.dsl.Dsl;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.cd.acceptance.dsl.Channels.Amazon;
-import static com.cd.acceptance.dsl.Channels.BookDepository;
 import static com.cd.acceptance.dsl.Channels.MyLocalBookStore;
 
 /**
@@ -15,7 +13,7 @@ import static com.cd.acceptance.dsl.Channels.MyLocalBookStore;
 public class ExampleBookStoreAcceptanceTest extends Dsl
 {
     @Test
-    @Channel({Amazon, BookDepository, MyLocalBookStore})
+    @Channel({MyLocalBookStore})
     public void shouldAddBookToShoppingBasket() throws Exception
     {
         shopping.searchForBook("title: Continuous Delivery");
