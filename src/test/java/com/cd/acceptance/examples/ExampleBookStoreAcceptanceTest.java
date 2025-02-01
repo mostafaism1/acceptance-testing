@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import static com.cd.acceptance.dsl.Channels.Amazon;
 import static com.cd.acceptance.dsl.Channels.BookDepository;
+import static com.cd.acceptance.dsl.Channels.MyLocalBookStore;
 
 /**
  * Copyright (c) Continuous Delivery Ltd. 2016
@@ -14,7 +15,7 @@ import static com.cd.acceptance.dsl.Channels.BookDepository;
 public class ExampleBookStoreAcceptanceTest extends Dsl
 {
     @Test
-    @Channel({BookDepository, Amazon})
+    @Channel({Amazon, BookDepository, MyLocalBookStore})
     public void shouldAddBookToShoppingBasket() throws Exception
     {
         shopping.searchForBook("title: Continuous Delivery");
